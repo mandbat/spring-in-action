@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/knights/knights.iml" filepath="$PROJECT_DIR$/knights/knights.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springidol/springidol.iml" filepath="$PROJECT_DIR$/springidol/springidol.iml" />
+      <module fileurl="file://$PROJECT_DIR$/knights/knights.iml" filepath="$PROJECT_DIR$/knights/knights.iml" group="spring-in-action" />
+      <module fileurl="file://$PROJECT_DIR$/springidol/springidol.iml" filepath="$PROJECT_DIR$/springidol/springidol.iml" group="spring-in-action" />
     </modules>
   </component>
 </project>

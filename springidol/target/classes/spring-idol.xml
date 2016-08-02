@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	   default-init-method="turnLightOn" default-destroy-method="turnLightOff">
+
+<bean id="duke" class="com.springinaction.springidol.PoeticJuggler">
+		<constructor-arg value="15" />
+		<constructor-arg ref="sonnet29" />
+		<!-- <property name="ticket" ref="ticket" /> -->
+	</bean>
+
+	<bean id="sonnet29" class="com.springinaction.springidol.Sonnet29" />
+
+	<bean id="theStage" class="com.springinaction.springidol.Stage"
+		factory-method="getInstance" />
+
+	<bean id="ticket" class="com.springinaction.springidol.Ticket" />
+
+	<bean id="auditorium" class="com.springinaction.springidol.Auditorium"
+		init-method="turnLightOn" destroy-method="turnLightOff" />
+
+</beans>

@@ -32,29 +32,22 @@ public abstract class KnightGeneral implements KnightInterface {
 		this.quest = quest;
 	}
 
-	@Override
 	public void embarkOnQuest() {
-		// minstrel.singBeforeQuest();
 		quest.embark();
-		// minstrel.singAfterQuest();
 	}
 
-	@Override
 	public void setText1(String txt) {
 		this.text1 = txt;
 	}
 
-	@Override
 	public void setText2(String txt) {
 		this.text2 = txt;
 	}
 
-	@Override
 	public void init() {
 		System.out.println("Произошел вызов Init: " + text1);
 	}
 
-	@Override
 	public void prn() {
 		System.out.println("Произошел вызов метода: " + text2);
 	}
