@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+          "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<!-- KnightDragonKiller KnightDamselRescuing -->
+	<bean id="knight" class="com.springinaction.knights.KnightDamselRescuing"
+		init-method="init">
+		<constructor-arg index="0" value="I am a Champion!!!" />
+		<constructor-arg index="1" ref="knife" />
+		<!-- <ref bean="bow" /> -->
+		<!-- </constructor-arg> -->
+
+		<property name="text1" value="К бою готов!!!" />
+		<property name="text2" value="Жду приказаний!!!" />
+		<property name="quest">
+			<ref bean="questSlayDragon" />
+		</property>
+	</bean>
+
+	<bean id="knife" class="com.springinaction.knights.WeaponKnife" />
+
+	<bean id="bow" class="com.springinaction.knights.WeaponBow">
+		<property name="arrowCount" value="10" />
+	</bean>
+
+	<bean id="questSlayDragon" class="com.springinaction.knights.QuestSlayDragon">
+		<constructor-arg value="Ура!!! Я победил дракона!" />
+	</bean>
+
+	<!-- Объявление компонента Minstrel -->
+	<bean id="minstrel" class="com.springinaction.knights.Minstrel" />
+
+</beans>
+
+
+
